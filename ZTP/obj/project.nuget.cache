@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0u8HGGtevFp2Z5UdFDtloZt7aJjYkKDp6djTZ8vClthhwKAaVC3sqxKv/Q+nHHI5dUFkmMzvenWUILcSMohz9A==",
+  "dgSpecHash": "57fEtPnwaqYwFLgTYpruVVy04QePaBQ0In4Yf74hLnxN1aWVwk8ZKCppwBeY82F2NDXyDZhuNM3Ab0RGL2lXYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\OneDrive\\Pulpit\\ZTP\\ZTP\\ZTP.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\adria\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\system.drawing.common\\8.0.1\\system.drawing.common.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
