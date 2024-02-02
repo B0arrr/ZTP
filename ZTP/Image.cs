@@ -4,8 +4,13 @@ namespace ZTP;
 
 public class Image
 {
-    public static Matrix? IncreaseRatio(Matrix colorMatrix, InnerImageSize size, float[] ratio)
+    public static Matrix? IncreaseRatio(Matrix? colorMatrix, InnerImageSize size, float[] ratio)
     {
+        if (colorMatrix is null)
+        {
+            throw new ArgumentException("Podany obraz jest nieprawidłowy");
+        }
+        
         var output = new Matrix(colorMatrix.Width, colorMatrix.Height);
         
         if (ratio.Length != 3)
