@@ -6,11 +6,6 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine($"{args.Length}");
-        foreach (var arg in args)
-        {
-            Console.WriteLine(arg);
-        }
         if (args.Length != 2)
         {
             throw new ArgumentException("Podaj nazwę pliku wejściowego i pliku wejściowego po spacji");
@@ -35,7 +30,21 @@ internal class Program
 
         var image = file.LoadImage(args[0]);
 
-        var image2 = Image.IncreaseRatio(image, new[] { 1f, 1.5f, 1f });
+        var part1 = new InnerImageSize(0, image.Width / 2, 0, image.Height/2);
+
+        var image2 = Image.IncreaseRatio(image, part1,  new[] { 1f, 1.5f, 1f });
+        
+        var part2 = new InnerImageSize(0, image.Width / 2, image.Height/2, image.Height);
+
+        image2 = Image.IncreaseRatio(image2, part2,  new[] { 1.5f, 1f, 1f });
+        
+        var part3 = new InnerImageSize(image.Width/2, image.Width, image.Height/2, image.Height);
+
+        image2 = Image.IncreaseRatio(image2, part3,  new[] { 1f, 1f, 1.5f });
+        
+        var part4 = new InnerImageSize(image.Width/2, image.Width, 0, image.Height/2);
+
+        image2 = Image.IncreaseRatio(image2, part4,  new[] { .5f, .5f, .5f });
 
         if (image2 == null)
         {
